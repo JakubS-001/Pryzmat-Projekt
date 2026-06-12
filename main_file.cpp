@@ -43,6 +43,7 @@ using namespace Models;
  bool firstMouse = true;
  bool mouseUnlocked = false;
  bool altPressedLast = false;
+ 
 
 // Key Tracking
  bool spacePressedLast = false;
@@ -84,30 +85,30 @@ using namespace Models;
  * Funkcja jest wywoływana przy starcie aplikacji oraz każdorazowo po zmianie
  * parametrów obiektów przez użytkownika za pośrednictwem panelu ImGui.
  */
-void setupSceneObjects() {
-	cylinderModel = glm::mat4(1.0f);
-	cylinderModel = glm::translate(cylinderModel, cylinderPos);
-	cylinderModel = glm::rotate(cylinderModel, glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
-	cylinderModel = glm::rotate(cylinderModel, glm::radians(45.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-	cylinderModel = glm::scale(cylinderModel, cylinderScale);
+ void setupSceneObjects() {
+	 cylinderModel = glm::mat4(1.0f);
+	 cylinderModel = glm::translate(cylinderModel, cylinderPos);
+	 cylinderModel = glm::rotate(cylinderModel, glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+	 cylinderModel = glm::rotate(cylinderModel, glm::radians(45.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+	 cylinderModel = glm::scale(cylinderModel, cylinderScale);
 
-	mirrors.clear();
+	 mirrors.clear();
 
-	glm::mat4 m1 = glm::translate(glm::mat4(1.0f), mirror1Pos);
-	m1 = glm::rotate(m1, glm::radians(mirror1Yaw), glm::vec3(0.0f, 1.0f, 0.0f));
-	m1 = glm::scale(m1, glm::vec3(1.4f, 1.0f, 1.0f));
-	mirrors.push_back(m1);
+	 glm::mat4 m1 = glm::translate(glm::mat4(1.0f), mirror1Pos);
+	 m1 = glm::rotate(m1, glm::radians(mirror1Yaw), glm::vec3(0.0f, 1.0f, 0.0f));
+	 m1 = glm::scale(m1, glm::vec3(1.4f, 1.0f, 1.0f));
+	 mirrors.push_back(m1);
 
-	glm::mat4 m2 = glm::translate(glm::mat4(1.0f), mirror2Pos);
-	m2 = glm::rotate(m2, glm::radians(mirror2Yaw), glm::vec3(0.0f, 1.0f, 0.0f));
-	m2 = glm::scale(m2, glm::vec3(1.4f, 1.0f, 1.0f));
-	mirrors.push_back(m2);
+	 glm::mat4 m2 = glm::translate(glm::mat4(1.0f), mirror2Pos);
+	 m2 = glm::rotate(m2, glm::radians(mirror2Yaw), glm::vec3(0.0f, 1.0f, 0.0f));
+	 m2 = glm::scale(m2, glm::vec3(1.4f, 1.0f, 1.0f));
+	 mirrors.push_back(m2);
 
-	lensModel = glm::mat4(1.0f);
-	lensModel = glm::translate(lensModel, lensPos);
-	lensModel = glm::rotate(lensModel, glm::radians(30.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-	lensModel = glm::scale(lensModel, lensScale)
-}
+	 lensModel = glm::mat4(1.0f);
+	 lensModel = glm::translate(lensModel, lensPos);
+	 lensModel = glm::rotate(lensModel, glm::radians(30.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+	 lensModel = glm::scale(lensModel, lensScale);
+ }
 
 // --- CALLBACKS ---
 /**
@@ -180,7 +181,6 @@ void cursor_position_callback(GLFWwindow* window, double xpos, double ypos) {
 	if (cameraPitch < -89.0f) cameraPitch = -89.0f;
 	updateCameraFront();
 }
-
 
 /**
  * @brief Główna funkcja rysująca scenę 3D oraz obsługująca wejście użytkownika w każdej klatce.
@@ -417,6 +417,7 @@ void drawScene(GLFWwindow* window) {
 void initOpenGLProgram(GLFWwindow* window) {
 	initShaders();
 	setupSceneObjects();
+
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LEQUAL);
 	glEnable(GL_BLEND);

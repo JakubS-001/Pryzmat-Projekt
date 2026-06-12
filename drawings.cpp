@@ -35,8 +35,12 @@ void drawCube(ShaderProgram* sp, const glm::mat4& P, const glm::mat4& V, const g
 	glUniformMatrix4fv(sp->u("V"), 1, GL_FALSE, glm::value_ptr(V));
 	glUniformMatrix4fv(sp->u("M"), 1, GL_FALSE, glm::value_ptr(M));
 	glUniform4fv(sp->u("color"), 1, glm::value_ptr(color));
-	glm::vec4 viewLightDir = V * glm::vec4(glm::normalize(glm::vec3(-0.3f, 1.0f, -0.5f)), 0.0f);
-	glUniform4fv(sp->u("lightDir"), 1, glm::value_ptr(viewLightDir));
+	// Źródło światła punktowego zlokalizowane nad stołem (X=0.0, Y=4.0, Z=0.0)
+glm::vec4 lightPos = glm::vec4(0.0f, 2.2f, 0.0f, 1.0f); 
+
+// Transformacja współrzędnych światła do przestrzeni widoku (View Space)
+glm::vec4 viewLightPos = V * lightPos;
+glUniform4fv(sp->u("lightPos"), 1, glm::value_ptr(viewLightPos));
 	Models::cube.drawSolid(true);
 }
 

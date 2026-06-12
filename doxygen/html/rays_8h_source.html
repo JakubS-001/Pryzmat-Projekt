@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projekt Pryzmat: Plik źródłowy rays.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projekt Pryzmat
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('rays_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">rays.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="rays_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef RAYS_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define RAYS_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_beam_segment.html">   18</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_beam_segment.html">BeamSegment</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_beam_segment.html#a43ff68fb2f3494a6ee4a927c2852c4bf">   19</a></span>    glm::vec3 <a class="code hl_variable" href="struct_beam_segment.html#a43ff68fb2f3494a6ee4a927c2852c4bf">start</a>;     </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_beam_segment.html#a92871f96475c8c04830a135cba0adb44">   20</a></span>    glm::vec3 <a class="code hl_variable" href="struct_beam_segment.html#a92871f96475c8c04830a135cba0adb44">end</a>;       </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_beam_segment.html#ad440221f63ef5528789f8623e859caff">   21</a></span>    glm::vec4 <a class="code hl_variable" href="struct_beam_segment.html#ad440221f63ef5528789f8623e859caff">color</a>;     </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_beam_segment.html#ab0bbffaecf4461b331e0737b1b9828c1">   22</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_beam_segment.html#ab0bbffaecf4461b331e0737b1b9828c1">wavelength</a>;    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_beam_ray.html">   28</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_beam_ray.html">BeamRay</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_beam_ray.html#a62bba47a55396bd26835ea728631842c">   29</a></span>    std::vector&lt;BeamSegment&gt; <a class="code hl_variable" href="struct_beam_ray.html#a62bba47a55396bd26835ea728631842c">segments</a>; </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_beam_ray.html#a1cda04953515805e72c84f8d8eafc722">   30</a></span>    glm::vec4 <a class="code hl_variable" href="struct_beam_ray.html#a1cda04953515805e72c84f8d8eafc722">color</a>;                   </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_burst.html">   36</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_burst.html">Burst</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_burst.html#a3e035fe52912006e7fcd41927d8aa7ac">   37</a></span>    glm::vec3 <a class="code hl_variable" href="struct_burst.html#a3e035fe52912006e7fcd41927d8aa7ac">origin</a>;    </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_burst.html#ade6efcb50c5295197e2716d025dc348b">   38</a></span>    glm::vec3 <a class="code hl_variable" href="struct_burst.html#ade6efcb50c5295197e2716d025dc348b">dir</a>;       </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">extern</span> glm::vec3 <a class="code hl_variable" href="main__file_8cpp.html#ae43c13156b27a792379c08fde96d87c8">prismPos</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">bool</span> <a class="code hl_function" href="rays_8h.html#ae3cef983461dd6762b87af9be851593d">rayTriangleIntersect</a>(<span class="keyword">const</span> glm::vec3&amp; orig, <span class="keyword">const</span> glm::vec3&amp; dir,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">const</span> glm::vec3&amp; v0, <span class="keyword">const</span> glm::vec3&amp; v1, <span class="keyword">const</span> glm::vec3&amp; v2,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">float</span>&amp; t, glm::vec3&amp; faceNormal);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">bool</span> <a class="code hl_function" href="rays_8h.html#a6991598d702efa8d568dd0e23d5b4044">intersectTable</a>(<span class="keyword">const</span> glm::vec3&amp; origin, <span class="keyword">const</span> glm::vec3&amp; dir, <span class="keywordtype">float</span>&amp; t, glm::vec3&amp; normal);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">bool</span> <a class="code hl_function" href="rays_8h.html#a01e6d150dbb3694709083f704679bcab">intersectPrismFace</a>(<span class="keyword">const</span> glm::vec3&amp; origin, <span class="keyword">const</span> glm::vec3&amp; dir,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">const</span> glm::vec3&amp; v0, <span class="keyword">const</span> glm::vec3&amp; v1, <span class="keyword">const</span> glm::vec3&amp; v2,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">float</span>&amp; t, glm::vec3&amp; orientedNormal);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keywordtype">bool</span> <a class="code hl_function" href="rays_8h.html#a02320bac24a2f731506cef7f4af9f2a9">intersectPrism</a>(<span class="keyword">const</span> glm::vec3&amp; origin, <span class="keyword">const</span> glm::vec3&amp; dir, <span class="keywordtype">float</span>&amp; t, glm::vec3&amp; normal);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keywordtype">bool</span> <a class="code hl_function" href="rays_8h.html#a213bad50fa74a196fc8ef66a2ed8c8ee">intersectSphere</a>(<span class="keyword">const</span> glm::vec3&amp; origin, <span class="keyword">const</span> glm::vec3&amp; dir, <span class="keywordtype">float</span>&amp; t, glm::vec3&amp; normal);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordtype">bool</span> <a class="code hl_function" href="rays_8h.html#ac344aab90415dac7306789129085dc75">intersectCylinder</a>(<span class="keyword">const</span> glm::vec3&amp; origin, <span class="keyword">const</span> glm::vec3&amp; dir, <span class="keyword">const</span> glm::mat4&amp; model, <span class="keywordtype">float</span>&amp; t, glm::vec3&amp; normal);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keywordtype">bool</span> <a class="code hl_function" href="rays_8h.html#ab9640d8d70b3f96add6ca2425b5ff6e1">intersectMirror</a>(<span class="keyword">const</span> glm::vec3&amp; origin, <span class="keyword">const</span> glm::vec3&amp; dir, <span class="keyword">const</span> glm::mat4&amp; mirrorM, <span class="keywordtype">float</span>&amp; t, glm::vec3&amp; normal);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keywordtype">bool</span> <a class="code hl_function" href="rays_8h.html#a5ec650796fe3cf2a3d13c50c4fc702de">intersectLens</a>(<span class="keyword">const</span> glm::vec3&amp; origin, <span class="keyword">const</span> glm::vec3&amp; dir, <span class="keyword">const</span> glm::mat4&amp; model, <span class="keywordtype">float</span>&amp; t, glm::vec3&amp; normal);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keywordtype">bool</span> <a class="code hl_function" href="rays_8h.html#a65a56d5076ef9d4dfd76ec783cb34c41">intersectRoom</a>(<span class="keyword">const</span> glm::vec3&amp; origin, <span class="keyword">const</span> glm::vec3&amp; dir, <span class="keywordtype">float</span>&amp; t, glm::vec3&amp; normal);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keywordtype">float</span> <a class="code hl_function" href="rays_8h.html#a81ee193120596c646dec64d7a7670cb0">intersectRaySegment</a>(glm::vec3 ro, glm::vec3 rd, glm::vec3 p0, glm::vec3 p1);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">// --- OPTICS SIMULATION FUNCTIONS ---</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">// Wymaga dostępu do globalnych zmiennych z main_file</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keyword">extern</span> std::vector&lt;glm::mat4&gt; mirrors;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keyword">extern</span> glm::mat4 cylinderModel;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keyword">extern</span> glm::mat4 lensModel;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="keyword">extern</span> <span class="keywordtype">float</span> prismIndexOfRefraction;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keyword">extern</span> <span class="keywordtype">float</span> prismDispersion;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="keyword">extern</span> std::vector&lt;BeamRay&gt; <a class="code hl_variable" href="drawings_8h.html#a7406cc6ba39acd2c6d2dd0571b6ea81e">firedRays</a>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>glm::vec4 <a class="code hl_function" href="rays_8h.html#a32421fffdaf5fa31a4bd0db1d28d117e">wavelengthToColor</a>(<span class="keywordtype">float</span> wavelength);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="keywordtype">float</span> <a class="code hl_function" href="rays_8h.html#a0d7e42c67683294bd637b4da0739a10c">refractiveIndexForWavelength</a>(<span class="keywordtype">float</span> wavelength);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="keywordtype">void</span> <a class="code hl_function" href="rays_8h.html#af753c2b8c5ec71c535039ea3368ff258">addBeamSegment</a>(<a class="code hl_struct" href="struct_beam_ray.html">BeamRay</a>&amp; ray, <span class="keyword">const</span> glm::vec3&amp; start, <span class="keyword">const</span> glm::vec3&amp; end, <span class="keywordtype">float</span> wavelength);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keywordtype">void</span> <a class="code hl_function" href="rays_8h.html#a3db67d9c21e5f7964a5e98e7c5dd920f">traceBeam</a>(<a class="code hl_struct" href="struct_beam_ray.html">BeamRay</a>&amp; ray, <span class="keyword">const</span> glm::vec3&amp; origin, <span class="keyword">const</span> glm::vec3&amp; dir, <span class="keywordtype">bool</span> inside, <span class="keywordtype">int</span> depth, <span class="keywordtype">float</span> currentIOR, <span class="keywordtype">float</span> wavelength);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keywordtype">void</span> <a class="code hl_function" href="rays_8h.html#ab3f4a70535b9ea8fb946ca4b80cbe460">simulateBurst</a>(<span class="keyword">const</span> glm::vec3&amp; origin, <span class="keyword">const</span> glm::vec3&amp; direction);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">#endif </span><span class="comment">// RAYS_H</span></div>
+<div class="ttc" id="adrawings_8h_html_a7406cc6ba39acd2c6d2dd0571b6ea81e"><div class="ttname"><a href="drawings_8h.html#a7406cc6ba39acd2c6d2dd0571b6ea81e">firedRays</a></div><div class="ttdeci">std::vector&lt; BeamRay &gt; firedRays</div><div class="ttdoc">Zewnętrzne zmienne używane podczas rysowania HUD oraz renderowania promieni.</div><div class="ttdef"><b>Definicja</b> main_file.cpp:58</div></div>
+<div class="ttc" id="amain__file_8cpp_html_ae43c13156b27a792379c08fde96d87c8"><div class="ttname"><a href="main__file_8cpp.html#ae43c13156b27a792379c08fde96d87c8">prismPos</a></div><div class="ttdeci">glm::vec3 prismPos</div><div class="ttdoc">Zewnętrzna zmienna globalna wymagana do prawidłowego obliczenia położenia pryzmatu w przestrzeni.</div><div class="ttdef"><b>Definicja</b> main_file.cpp:73</div></div>
+<div class="ttc" id="arays_8h_html_a01e6d150dbb3694709083f704679bcab"><div class="ttname"><a href="rays_8h.html#a01e6d150dbb3694709083f704679bcab">intersectPrismFace</a></div><div class="ttdeci">bool intersectPrismFace(const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, const glm::vec3 &amp;v0, const glm::vec3 &amp;v1, const glm::vec3 &amp;v2, float &amp;t, glm::vec3 &amp;orientedNormal)</div><div class="ttdoc">Sprawdza przecięcie promienia z pojedynczą ścianą pryzmatu.</div><div class="ttdef"><b>Definicja</b> rays.cpp:100</div></div>
+<div class="ttc" id="arays_8h_html_a02320bac24a2f731506cef7f4af9f2a9"><div class="ttname"><a href="rays_8h.html#a02320bac24a2f731506cef7f4af9f2a9">intersectPrism</a></div><div class="ttdeci">bool intersectPrism(const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, float &amp;t, glm::vec3 &amp;normal)</div><div class="ttdoc">Sprawdza przecięcie promienia z całym pryzmatem.</div><div class="ttdef"><b>Definicja</b> rays.cpp:117</div></div>
+<div class="ttc" id="arays_8h_html_a0d7e42c67683294bd637b4da0739a10c"><div class="ttname"><a href="rays_8h.html#a0d7e42c67683294bd637b4da0739a10c">refractiveIndexForWavelength</a></div><div class="ttdeci">float refractiveIndexForWavelength(float wavelength)</div><div class="ttdoc">Oblicza wskaźnik załamania dla zadanej długości fali.</div><div class="ttdef"><b>Definicja</b> rays.cpp:402</div></div>
+<div class="ttc" id="arays_8h_html_a213bad50fa74a196fc8ef66a2ed8c8ee"><div class="ttname"><a href="rays_8h.html#a213bad50fa74a196fc8ef66a2ed8c8ee">intersectSphere</a></div><div class="ttdeci">bool intersectSphere(const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, float &amp;t, glm::vec3 &amp;normal)</div><div class="ttdoc">Sprawdza przecięcie promienia ze sferą.</div><div class="ttdef"><b>Definicja</b> rays.cpp:153</div></div>
+<div class="ttc" id="arays_8h_html_a32421fffdaf5fa31a4bd0db1d28d117e"><div class="ttname"><a href="rays_8h.html#a32421fffdaf5fa31a4bd0db1d28d117e">wavelengthToColor</a></div><div class="ttdeci">glm::vec4 wavelengthToColor(float wavelength)</div><div class="ttdoc">Konwertuje długość fali na kolor RGBA.</div><div class="ttdef"><b>Definicja</b> rays.cpp:387</div></div>
+<div class="ttc" id="arays_8h_html_a3db67d9c21e5f7964a5e98e7c5dd920f"><div class="ttname"><a href="rays_8h.html#a3db67d9c21e5f7964a5e98e7c5dd920f">traceBeam</a></div><div class="ttdeci">void traceBeam(BeamRay &amp;ray, const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, bool inside, int depth, float currentIOR, float wavelength)</div><div class="ttdoc">Śledzi przebieg promienia przez scenę z odbiciami i załamaniami.</div><div class="ttdef"><b>Definicja</b> rays.cpp:427</div></div>
+<div class="ttc" id="arays_8h_html_a5ec650796fe3cf2a3d13c50c4fc702de"><div class="ttname"><a href="rays_8h.html#a5ec650796fe3cf2a3d13c50c4fc702de">intersectLens</a></div><div class="ttdeci">bool intersectLens(const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, const glm::mat4 &amp;model, float &amp;t, glm::vec3 &amp;normal)</div><div class="ttdoc">Sprawdza przecięcie promienia z soczewką.</div><div class="ttdef"><b>Definicja</b> rays.cpp:275</div></div>
+<div class="ttc" id="arays_8h_html_a65a56d5076ef9d4dfd76ec783cb34c41"><div class="ttname"><a href="rays_8h.html#a65a56d5076ef9d4dfd76ec783cb34c41">intersectRoom</a></div><div class="ttdeci">bool intersectRoom(const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, float &amp;t, glm::vec3 &amp;normal)</div><div class="ttdoc">Sprawdza przecięcie promienia ze ścianami pokoju/sceny.</div><div class="ttdef"><b>Definicja</b> rays.cpp:314</div></div>
+<div class="ttc" id="arays_8h_html_a6991598d702efa8d568dd0e23d5b4044"><div class="ttname"><a href="rays_8h.html#a6991598d702efa8d568dd0e23d5b4044">intersectTable</a></div><div class="ttdeci">bool intersectTable(const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, float &amp;t, glm::vec3 &amp;normal)</div><div class="ttdoc">Sprawdza przecięcie promienia ze stołem.</div><div class="ttdef"><b>Definicja</b> rays.cpp:57</div></div>
+<div class="ttc" id="arays_8h_html_a81ee193120596c646dec64d7a7670cb0"><div class="ttname"><a href="rays_8h.html#a81ee193120596c646dec64d7a7670cb0">intersectRaySegment</a></div><div class="ttdeci">float intersectRaySegment(glm::vec3 ro, glm::vec3 rd, glm::vec3 p0, glm::vec3 p1)</div><div class="ttdoc">Oblicza odległość między promieniem kamery a segmentem promienia światła.</div><div class="ttdef"><b>Definicja</b> rays.cpp:349</div></div>
+<div class="ttc" id="arays_8h_html_ab3f4a70535b9ea8fb946ca4b80cbe460"><div class="ttname"><a href="rays_8h.html#ab3f4a70535b9ea8fb946ca4b80cbe460">simulateBurst</a></div><div class="ttdeci">void simulateBurst(const glm::vec3 &amp;origin, const glm::vec3 &amp;direction)</div><div class="ttdoc">Symuluje wybuch promieni świetlnych z rozdzieleniem na długości fali.</div><div class="ttdef"><b>Definicja</b> rays.cpp:497</div></div>
+<div class="ttc" id="arays_8h_html_ab9640d8d70b3f96add6ca2425b5ff6e1"><div class="ttname"><a href="rays_8h.html#ab9640d8d70b3f96add6ca2425b5ff6e1">intersectMirror</a></div><div class="ttdeci">bool intersectMirror(const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, const glm::mat4 &amp;mirrorM, float &amp;t, glm::vec3 &amp;normal)</div><div class="ttdoc">Sprawdza przecięcie promienia z płaskim lustrem.</div><div class="ttdef"><b>Definicja</b> rays.cpp:243</div></div>
+<div class="ttc" id="arays_8h_html_ac344aab90415dac7306789129085dc75"><div class="ttname"><a href="rays_8h.html#ac344aab90415dac7306789129085dc75">intersectCylinder</a></div><div class="ttdeci">bool intersectCylinder(const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, const glm::mat4 &amp;model, float &amp;t, glm::vec3 &amp;normal)</div><div class="ttdoc">Sprawdza przecięcie promienia z cylindrem.</div><div class="ttdef"><b>Definicja</b> rays.cpp:184</div></div>
+<div class="ttc" id="arays_8h_html_ae3cef983461dd6762b87af9be851593d"><div class="ttname"><a href="rays_8h.html#ae3cef983461dd6762b87af9be851593d">rayTriangleIntersect</a></div><div class="ttdeci">bool rayTriangleIntersect(const glm::vec3 &amp;orig, const glm::vec3 &amp;dir, const glm::vec3 &amp;v0, const glm::vec3 &amp;v1, const glm::vec3 &amp;v2, float &amp;t, glm::vec3 &amp;faceNormal)</div><div class="ttdoc">Sprawdza przecięcie promienia z trójkątem w przestrzeni 3D.</div><div class="ttdef"><b>Definicja</b> rays.cpp:27</div></div>
+<div class="ttc" id="arays_8h_html_af753c2b8c5ec71c535039ea3368ff258"><div class="ttname"><a href="rays_8h.html#af753c2b8c5ec71c535039ea3368ff258">addBeamSegment</a></div><div class="ttdeci">void addBeamSegment(BeamRay &amp;ray, const glm::vec3 &amp;start, const glm::vec3 &amp;end, float wavelength)</div><div class="ttdoc">Dodaje segment promienia do struktury BeamRay.</div><div class="ttdef"><b>Definicja</b> rays.cpp:413</div></div>
+<div class="ttc" id="astruct_beam_ray_html"><div class="ttname"><a href="struct_beam_ray.html">BeamRay</a></div><div class="ttdoc">Struktura opisująca cały promień światła, składający się z ciągu segmentów.</div><div class="ttdef"><b>Definicja</b> rays.h:28</div></div>
+<div class="ttc" id="astruct_beam_ray_html_a1cda04953515805e72c84f8d8eafc722"><div class="ttname"><a href="struct_beam_ray.html#a1cda04953515805e72c84f8d8eafc722">BeamRay::color</a></div><div class="ttdeci">glm::vec4 color</div><div class="ttdef"><b>Definicja</b> rays.h:30</div></div>
+<div class="ttc" id="astruct_beam_ray_html_a62bba47a55396bd26835ea728631842c"><div class="ttname"><a href="struct_beam_ray.html#a62bba47a55396bd26835ea728631842c">BeamRay::segments</a></div><div class="ttdeci">std::vector&lt; BeamSegment &gt; segments</div><div class="ttdef"><b>Definicja</b> rays.h:29</div></div>
+<div class="ttc" id="astruct_beam_segment_html"><div class="ttname"><a href="struct_beam_segment.html">BeamSegment</a></div><div class="ttdoc">Struktura reprezentująca pojedynczy odcinek promienia świetlnego (segment).</div><div class="ttdef"><b>Definicja</b> rays.h:18</div></div>
+<div class="ttc" id="astruct_beam_segment_html_a43ff68fb2f3494a6ee4a927c2852c4bf"><div class="ttname"><a href="struct_beam_segment.html#a43ff68fb2f3494a6ee4a927c2852c4bf">BeamSegment::start</a></div><div class="ttdeci">glm::vec3 start</div><div class="ttdef"><b>Definicja</b> rays.h:19</div></div>
+<div class="ttc" id="astruct_beam_segment_html_a92871f96475c8c04830a135cba0adb44"><div class="ttname"><a href="struct_beam_segment.html#a92871f96475c8c04830a135cba0adb44">BeamSegment::end</a></div><div class="ttdeci">glm::vec3 end</div><div class="ttdef"><b>Definicja</b> rays.h:20</div></div>
+<div class="ttc" id="astruct_beam_segment_html_ab0bbffaecf4461b331e0737b1b9828c1"><div class="ttname"><a href="struct_beam_segment.html#ab0bbffaecf4461b331e0737b1b9828c1">BeamSegment::wavelength</a></div><div class="ttdeci">float wavelength</div><div class="ttdef"><b>Definicja</b> rays.h:22</div></div>
+<div class="ttc" id="astruct_beam_segment_html_ad440221f63ef5528789f8623e859caff"><div class="ttname"><a href="struct_beam_segment.html#ad440221f63ef5528789f8623e859caff">BeamSegment::color</a></div><div class="ttdeci">glm::vec4 color</div><div class="ttdef"><b>Definicja</b> rays.h:21</div></div>
+<div class="ttc" id="astruct_burst_html"><div class="ttname"><a href="struct_burst.html">Burst</a></div><div class="ttdoc">Struktura przechowująca parametry początkowe punktu wystrzelenia wiązki (lasera).</div><div class="ttdef"><b>Definicja</b> rays.h:36</div></div>
+<div class="ttc" id="astruct_burst_html_a3e035fe52912006e7fcd41927d8aa7ac"><div class="ttname"><a href="struct_burst.html#a3e035fe52912006e7fcd41927d8aa7ac">Burst::origin</a></div><div class="ttdeci">glm::vec3 origin</div><div class="ttdef"><b>Definicja</b> rays.h:37</div></div>
+<div class="ttc" id="astruct_burst_html_ade6efcb50c5295197e2716d025dc348b"><div class="ttname"><a href="struct_burst.html#ade6efcb50c5295197e2716d025dc348b">Burst::dir</a></div><div class="ttdeci">glm::vec3 dir</div><div class="ttdef"><b>Definicja</b> rays.h:38</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="rays_8h.html">rays.h</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

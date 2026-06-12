@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projekt Pryzmat: Dokumentacja pliku drawings.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projekt Pryzmat
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('drawings_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja pliku drawings.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Moduł do rysowania elementów sceny.  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="drawings_8h_source.html">drawings.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rays_8h_source.html">rays.h</a>&quot;</code><br />
+<code>#include &quot;shaderprogram.h&quot;</code><br />
+<code>#include &quot;allmodels.h&quot;</code><br />
+<code>#include &quot;imgui.h&quot;</code><br />
+<code>#include &lt;GL/glew.h&gt;</code><br />
+<code>#include &lt;glm/gtc/type_ptr.hpp&gt;</code><br />
+<code>#include &lt;glm/gtc/matrix_transform.hpp&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a24ac893fab54584306d8bea57005e732" id="r_a24ac893fab54584306d8bea57005e732"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a24ac893fab54584306d8bea57005e732">drawCube</a> (ShaderProgram *sp, const glm::mat4 &amp;P, const glm::mat4 &amp;V, const glm::mat4 &amp;M, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a24ac893fab54584306d8bea57005e732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje sześcian na scenie wykorzystując podany shader.  <br /></td></tr>
+<tr class="memitem:a6dd0387e80577890990967c895cd0533" id="r_a6dd0387e80577890990967c895cd0533"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6dd0387e80577890990967c895cd0533">drawPrism</a> (const glm::mat4 &amp;P, const glm::mat4 &amp;V, const glm::mat4 &amp;M, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a6dd0387e80577890990967c895cd0533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje półprzezroczysty pryzmat geometryczny.  <br /></td></tr>
+<tr class="memitem:a3aa56a21b87a43c962d97fc6c2e39001" id="r_a3aa56a21b87a43c962d97fc6c2e39001"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3aa56a21b87a43c962d97fc6c2e39001">drawSphere</a> (const glm::mat4 &amp;P, const glm::mat4 &amp;V, const glm::vec3 &amp;center, float radius, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a3aa56a21b87a43c962d97fc6c2e39001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generuje i rysuje geometryczną sferę.  <br /></td></tr>
+<tr class="memitem:a95528e5a333a975d7f2e14ff1aae4ea8" id="r_a95528e5a333a975d7f2e14ff1aae4ea8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a95528e5a333a975d7f2e14ff1aae4ea8">drawEllipsoid</a> (const glm::mat4 &amp;P, const glm::mat4 &amp;V, const glm::mat4 &amp;M, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:a95528e5a333a975d7f2e14ff1aae4ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderuje półprzezroczystą, rozciągniętą elipsoidę działającą jako soczewka.  <br /></td></tr>
+<tr class="memitem:adec92c4824f2633286f8160e10c243c5" id="r_adec92c4824f2633286f8160e10c243c5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adec92c4824f2633286f8160e10c243c5">drawCylinder</a> (const glm::mat4 &amp;P, const glm::mat4 &amp;V, const glm::mat4 &amp;M, const glm::vec4 &amp;color)</td></tr>
+<tr class="memdesc:adec92c4824f2633286f8160e10c243c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje półprzezroczysty walec.  <br /></td></tr>
+<tr class="memitem:aa267b34011532bc61aca22faab6fa966" id="r_aa267b34011532bc61aca22faab6fa966"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa267b34011532bc61aca22faab6fa966">drawMirrorObject</a> (const glm::mat4 &amp;P, const glm::mat4 &amp;V, const glm::mat4 &amp;M)</td></tr>
+<tr class="memdesc:aa267b34011532bc61aca22faab6fa966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rysuje prostokątną płaszczyznę odbijającą (lustro).  <br /></td></tr>
+<tr class="memitem:abdd2f989a06edff5dcd820040e5daa8a" id="r_abdd2f989a06edff5dcd820040e5daa8a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abdd2f989a06edff5dcd820040e5daa8a">drawBeamLines</a> (const glm::mat4 &amp;P, const glm::mat4 &amp;V)</td></tr>
+<tr class="memdesc:abdd2f989a06edff5dcd820040e5daa8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyświetla wszystkie wygenerowane linie dla wyzwolonych promieni świetlnych.  <br /></td></tr>
+<tr class="memitem:a26e77329fb96fa769142748b5c9617fe" id="r_a26e77329fb96fa769142748b5c9617fe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a26e77329fb96fa769142748b5c9617fe">drawCrosshairHUD</a> ()</td></tr>
+<tr class="memdesc:a26e77329fb96fa769142748b5c9617fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odpowiada za wyświetlenie interfejsu ImGui i rysowanie wskaźnika.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:a060a4652d8ea9f44e1d3f8dd2d24472f" id="r_a060a4652d8ea9f44e1d3f8dd2d24472f"><td class="memItemLeft"><a id="a060a4652d8ea9f44e1d3f8dd2d24472f" name="a060a4652d8ea9f44e1d3f8dd2d24472f"></a>
+ShaderProgram *&#160;</td><td class="memItemRight"><b>spLambert</b></td></tr>
+<tr class="memitem:a96b60dc5c431b00883a7d657d52814de" id="r_a96b60dc5c431b00883a7d657d52814de"><td class="memItemLeft"><a id="a96b60dc5c431b00883a7d657d52814de" name="a96b60dc5c431b00883a7d657d52814de"></a>
+ShaderProgram *&#160;</td><td class="memItemRight"><b>spConstant</b></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Moduł do rysowania elementów sceny. </p>
+<p>Udostępnia funkcje do rysowania m.in. geometrii (sześciany, sfery, soczewki, pryzmaty), a także rysuje promienie symulacji optycznej i interfejs celownika/statystyk (HUD). </p><dl class="section author"><dt>Autor</dt><dd>Jakub Stasierski </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji</h2>
+<a id="abdd2f989a06edff5dcd820040e5daa8a" name="abdd2f989a06edff5dcd820040e5daa8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd2f989a06edff5dcd820040e5daa8a">&#9670;&#160;</a></span>drawBeamLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawBeamLines </td>
+          <td>(</td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>P</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wyświetla wszystkie wygenerowane linie dla wyzwolonych promieni świetlnych. </p>
+<p>Używa mieszania addytywnego do stworzenia efektu poświaty dla promieni laserowych. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P</td><td>Macierz projekcji. </td></tr>
+    <tr><td class="paramname">V</td><td>Macierz widoku kamery. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a26e77329fb96fa769142748b5c9617fe" name="a26e77329fb96fa769142748b5c9617fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e77329fb96fa769142748b5c9617fe">&#9670;&#160;</a></span>drawCrosshairHUD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawCrosshairHUD </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Odpowiada za wyświetlenie interfejsu ImGui i rysowanie wskaźnika. </p>
+<p>Aktualizuje HUD (FPS, liczba promieni) oraz pozwala namierzać konkretny promień i podglądać jego długość fali. </p>
+
+</div>
+</div>
+<a id="a24ac893fab54584306d8bea57005e732" name="a24ac893fab54584306d8bea57005e732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24ac893fab54584306d8bea57005e732">&#9670;&#160;</a></span>drawCube()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawCube </td>
+          <td>(</td>
+          <td class="paramtype">ShaderProgram *</td>          <td class="paramname"><span class="paramname"><em>sp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>P</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>M</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec4 &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rysuje sześcian na scenie wykorzystując podany shader. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sp</td><td>Wskaźnik do instancji programu shadera użytego do renderowania. </td></tr>
+    <tr><td class="paramname">P</td><td>Macierz projekcji. </td></tr>
+    <tr><td class="paramname">V</td><td>Macierz widoku. </td></tr>
+    <tr><td class="paramname">M</td><td>Macierz modelu. </td></tr>
+    <tr><td class="paramname">color</td><td>Kolor bazowy sześcianu w formacie RGBA. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adec92c4824f2633286f8160e10c243c5" name="adec92c4824f2633286f8160e10c243c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec92c4824f2633286f8160e10c243c5">&#9670;&#160;</a></span>drawCylinder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawCylinder </td>
+          <td>(</td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>P</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>M</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec4 &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rysuje półprzezroczysty walec. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P</td><td>Macierz projekcji. </td></tr>
+    <tr><td class="paramname">V</td><td>Macierz widoku. </td></tr>
+    <tr><td class="paramname">M</td><td>Macierz modelu walca. </td></tr>
+    <tr><td class="paramname">color</td><td>Kolor obiektu (RGBA). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a95528e5a333a975d7f2e14ff1aae4ea8" name="a95528e5a333a975d7f2e14ff1aae4ea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95528e5a333a975d7f2e14ff1aae4ea8">&#9670;&#160;</a></span>drawEllipsoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawEllipsoid </td>
+          <td>(</td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>P</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>M</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec4 &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renderuje półprzezroczystą, rozciągniętą elipsoidę działającą jako soczewka. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P</td><td>Macierz projekcji. </td></tr>
+    <tr><td class="paramname">V</td><td>Macierz widoku. </td></tr>
+    <tr><td class="paramname">M</td><td>Macierz transformacji soczewki. </td></tr>
+    <tr><td class="paramname">color</td><td>Kolor soczewki. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa267b34011532bc61aca22faab6fa966" name="aa267b34011532bc61aca22faab6fa966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa267b34011532bc61aca22faab6fa966">&#9670;&#160;</a></span>drawMirrorObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawMirrorObject </td>
+          <td>(</td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>P</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>M</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rysuje prostokątną płaszczyznę odbijającą (lustro). </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P</td><td>Macierz projekcji. </td></tr>
+    <tr><td class="paramname">V</td><td>Macierz widoku. </td></tr>
+    <tr><td class="paramname">M</td><td>Macierz modelu lustra. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6dd0387e80577890990967c895cd0533" name="a6dd0387e80577890990967c895cd0533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dd0387e80577890990967c895cd0533">&#9670;&#160;</a></span>drawPrism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawPrism </td>
+          <td>(</td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>P</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>M</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec4 &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rysuje półprzezroczysty pryzmat geometryczny. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P</td><td>Macierz projekcji. </td></tr>
+    <tr><td class="paramname">V</td><td>Macierz widoku. </td></tr>
+    <tr><td class="paramname">M</td><td>Macierz modelu dla pryzmatu. </td></tr>
+    <tr><td class="paramname">color</td><td>Kolor i przezroczystość obiektu (RGBA). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3aa56a21b87a43c962d97fc6c2e39001" name="a3aa56a21b87a43c962d97fc6c2e39001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aa56a21b87a43c962d97fc6c2e39001">&#9670;&#160;</a></span>drawSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawSphere </td>
+          <td>(</td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>P</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>V</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec4 &amp;</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generuje i rysuje geometryczną sferę. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P</td><td>Macierz projekcji. </td></tr>
+    <tr><td class="paramname">V</td><td>Macierz widoku. </td></tr>
+    <tr><td class="paramname">center</td><td>Położenie środka sfery w przestrzeni światowej. </td></tr>
+    <tr><td class="paramname">radius</td><td>Promień sfery. </td></tr>
+    <tr><td class="paramname">color</td><td>Kolor renderowanej sfery (RGBA). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="drawings_8cpp.html">drawings.cpp</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

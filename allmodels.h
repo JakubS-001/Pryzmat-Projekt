@@ -21,5 +21,8 @@ Place, Fifth Floor, Boston, MA  02110 - 1301  USA
 #define ALL_MODELS_H
 
 #include "cube.h"
+#include "sphere.h"
+#include "teapot.h"
+#include "torus.h"
 
 #endif

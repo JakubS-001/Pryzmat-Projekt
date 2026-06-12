@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projekt Pryzmat: Dokumentacja pliku rays.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projekt Pryzmat
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('rays_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Dokumentacja pliku rays.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Moduł z logiką promieni świetlnych.  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="rays_8h_source.html">rays.h</a>&quot;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;glm/gtc/matrix_transform.hpp&gt;</code><br />
+<code>#include &lt;glm/geometric.hpp&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:ae3cef983461dd6762b87af9be851593d" id="r_ae3cef983461dd6762b87af9be851593d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae3cef983461dd6762b87af9be851593d">rayTriangleIntersect</a> (const glm::vec3 &amp;orig, const glm::vec3 &amp;dir, const glm::vec3 &amp;v0, const glm::vec3 &amp;v1, const glm::vec3 &amp;v2, float &amp;t, glm::vec3 &amp;faceNormal)</td></tr>
+<tr class="memdesc:ae3cef983461dd6762b87af9be851593d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza przecięcie promienia z trójkątem w przestrzeni 3D.  <br /></td></tr>
+<tr class="memitem:a6991598d702efa8d568dd0e23d5b4044" id="r_a6991598d702efa8d568dd0e23d5b4044"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6991598d702efa8d568dd0e23d5b4044">intersectTable</a> (const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, float &amp;t, glm::vec3 &amp;normal)</td></tr>
+<tr class="memdesc:a6991598d702efa8d568dd0e23d5b4044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza przecięcie promienia ze stołem.  <br /></td></tr>
+<tr class="memitem:a01e6d150dbb3694709083f704679bcab" id="r_a01e6d150dbb3694709083f704679bcab"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a01e6d150dbb3694709083f704679bcab">intersectPrismFace</a> (const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, const glm::vec3 &amp;v0, const glm::vec3 &amp;v1, const glm::vec3 &amp;v2, float &amp;t, glm::vec3 &amp;orientedNormal)</td></tr>
+<tr class="memdesc:a01e6d150dbb3694709083f704679bcab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza przecięcie promienia z pojedynczą ścianą pryzmatu.  <br /></td></tr>
+<tr class="memitem:a02320bac24a2f731506cef7f4af9f2a9" id="r_a02320bac24a2f731506cef7f4af9f2a9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a02320bac24a2f731506cef7f4af9f2a9">intersectPrism</a> (const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, float &amp;t, glm::vec3 &amp;normal)</td></tr>
+<tr class="memdesc:a02320bac24a2f731506cef7f4af9f2a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza przecięcie promienia z całym pryzmatem.  <br /></td></tr>
+<tr class="memitem:a213bad50fa74a196fc8ef66a2ed8c8ee" id="r_a213bad50fa74a196fc8ef66a2ed8c8ee"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a213bad50fa74a196fc8ef66a2ed8c8ee">intersectSphere</a> (const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, float &amp;t, glm::vec3 &amp;normal)</td></tr>
+<tr class="memdesc:a213bad50fa74a196fc8ef66a2ed8c8ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza przecięcie promienia ze sferą.  <br /></td></tr>
+<tr class="memitem:ac344aab90415dac7306789129085dc75" id="r_ac344aab90415dac7306789129085dc75"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac344aab90415dac7306789129085dc75">intersectCylinder</a> (const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, const glm::mat4 &amp;model, float &amp;t, glm::vec3 &amp;normal)</td></tr>
+<tr class="memdesc:ac344aab90415dac7306789129085dc75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza przecięcie promienia z cylindrem.  <br /></td></tr>
+<tr class="memitem:ab9640d8d70b3f96add6ca2425b5ff6e1" id="r_ab9640d8d70b3f96add6ca2425b5ff6e1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab9640d8d70b3f96add6ca2425b5ff6e1">intersectMirror</a> (const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, const glm::mat4 &amp;mirrorM, float &amp;t, glm::vec3 &amp;normal)</td></tr>
+<tr class="memdesc:ab9640d8d70b3f96add6ca2425b5ff6e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza przecięcie promienia z płaskim lustrem.  <br /></td></tr>
+<tr class="memitem:a5ec650796fe3cf2a3d13c50c4fc702de" id="r_a5ec650796fe3cf2a3d13c50c4fc702de"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5ec650796fe3cf2a3d13c50c4fc702de">intersectLens</a> (const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, const glm::mat4 &amp;model, float &amp;t, glm::vec3 &amp;normal)</td></tr>
+<tr class="memdesc:a5ec650796fe3cf2a3d13c50c4fc702de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza przecięcie promienia z soczewką.  <br /></td></tr>
+<tr class="memitem:a65a56d5076ef9d4dfd76ec783cb34c41" id="r_a65a56d5076ef9d4dfd76ec783cb34c41"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a65a56d5076ef9d4dfd76ec783cb34c41">intersectRoom</a> (const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, float &amp;t, glm::vec3 &amp;normal)</td></tr>
+<tr class="memdesc:a65a56d5076ef9d4dfd76ec783cb34c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza przecięcie promienia ze ścianami pokoju/sceny.  <br /></td></tr>
+<tr class="memitem:a81ee193120596c646dec64d7a7670cb0" id="r_a81ee193120596c646dec64d7a7670cb0"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a81ee193120596c646dec64d7a7670cb0">intersectRaySegment</a> (glm::vec3 ro, glm::vec3 rd, glm::vec3 p0, glm::vec3 p1)</td></tr>
+<tr class="memdesc:a81ee193120596c646dec64d7a7670cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oblicza odległość między promieniem kamery a segmentem promienia światła.  <br /></td></tr>
+<tr class="memitem:a32421fffdaf5fa31a4bd0db1d28d117e" id="r_a32421fffdaf5fa31a4bd0db1d28d117e"><td class="memItemLeft">glm::vec4&#160;</td><td class="memItemRight"><a class="el" href="#a32421fffdaf5fa31a4bd0db1d28d117e">wavelengthToColor</a> (float wavelength)</td></tr>
+<tr class="memdesc:a32421fffdaf5fa31a4bd0db1d28d117e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konwertuje długość fali na kolor RGBA.  <br /></td></tr>
+<tr class="memitem:a0d7e42c67683294bd637b4da0739a10c" id="r_a0d7e42c67683294bd637b4da0739a10c"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0d7e42c67683294bd637b4da0739a10c">refractiveIndexForWavelength</a> (float wavelength)</td></tr>
+<tr class="memdesc:a0d7e42c67683294bd637b4da0739a10c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oblicza wskaźnik załamania dla zadanej długości fali.  <br /></td></tr>
+<tr class="memitem:af753c2b8c5ec71c535039ea3368ff258" id="r_af753c2b8c5ec71c535039ea3368ff258"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af753c2b8c5ec71c535039ea3368ff258">addBeamSegment</a> (<a class="el" href="struct_beam_ray.html">BeamRay</a> &amp;ray, const glm::vec3 &amp;start, const glm::vec3 &amp;end, float wavelength)</td></tr>
+<tr class="memdesc:af753c2b8c5ec71c535039ea3368ff258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje segment promienia do struktury <a class="el" href="struct_beam_ray.html" title="Struktura opisująca cały promień światła, składający się z ciągu segmentów.">BeamRay</a>.  <br /></td></tr>
+<tr class="memitem:a3db67d9c21e5f7964a5e98e7c5dd920f" id="r_a3db67d9c21e5f7964a5e98e7c5dd920f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3db67d9c21e5f7964a5e98e7c5dd920f">traceBeam</a> (<a class="el" href="struct_beam_ray.html">BeamRay</a> &amp;ray, const glm::vec3 &amp;origin, const glm::vec3 &amp;dir, bool inside, int depth, float currentIOR, float wavelength)</td></tr>
+<tr class="memdesc:a3db67d9c21e5f7964a5e98e7c5dd920f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Śledzi przebieg promienia przez scenę z odbiciami i załamaniami.  <br /></td></tr>
+<tr class="memitem:ab3f4a70535b9ea8fb946ca4b80cbe460" id="r_ab3f4a70535b9ea8fb946ca4b80cbe460"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab3f4a70535b9ea8fb946ca4b80cbe460">simulateBurst</a> (const glm::vec3 &amp;origin, const glm::vec3 &amp;direction)</td></tr>
+<tr class="memdesc:ab3f4a70535b9ea8fb946ca4b80cbe460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symuluje wybuch promieni świetlnych z rozdzieleniem na długości fali.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Moduł z logiką promieni świetlnych. </p>
+<p>Zawiera funkcje sprawdzające przecięcia promieni z siatkami trójkątów, pryzmatami, cylindrami, sferami, soczewkami oraz innymi elementami sceny. </p><dl class="section author"><dt>Autor</dt><dd>Jakub Stasierski </dd></dl>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacja funkcji</h2>
+<a id="af753c2b8c5ec71c535039ea3368ff258" name="af753c2b8c5ec71c535039ea3368ff258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af753c2b8c5ec71c535039ea3368ff258">&#9670;&#160;</a></span>addBeamSegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addBeamSegment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_beam_ray.html">BeamRay</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>wavelength</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje segment promienia do struktury <a class="el" href="struct_beam_ray.html" title="Struktura opisująca cały promień światła, składający się z ciągu segmentów.">BeamRay</a>. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray</td><td>Referencja do promienia, do którego dodawany jest segment. </td></tr>
+    <tr><td class="paramname">start</td><td>Punkt początkowy segmentu. </td></tr>
+    <tr><td class="paramname">end</td><td>Punkt końcowy segmentu. </td></tr>
+    <tr><td class="paramname">wavelength</td><td>Długość fali dla tego segmentu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac344aab90415dac7306789129085dc75" name="ac344aab90415dac7306789129085dc75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac344aab90415dac7306789129085dc75">&#9670;&#160;</a></span>intersectCylinder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool intersectCylinder </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>model</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>normal</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza przecięcie promienia z cylindrem. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>Punkt początkowy promienia. </td></tr>
+    <tr><td class="paramname">dir</td><td>Kierunek promienia. </td></tr>
+    <tr><td class="paramname">model</td><td>Macierz transformacji (model matrix) cylindra. </td></tr>
+    <tr><td class="paramname">t</td><td>Dystans do najbliższego punktu trafienia. </td></tr>
+    <tr><td class="paramname">normal</td><td>Normalna powierzchni na cylindrze. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jeśli promień przecina cylinder. </dd></dl>
+
+</div>
+</div>
+<a id="a5ec650796fe3cf2a3d13c50c4fc702de" name="a5ec650796fe3cf2a3d13c50c4fc702de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec650796fe3cf2a3d13c50c4fc702de">&#9670;&#160;</a></span>intersectLens()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool intersectLens </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>model</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>normal</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza przecięcie promienia z soczewką. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>Punkt początkowy promienia. </td></tr>
+    <tr><td class="paramname">dir</td><td>Kierunek promienia. </td></tr>
+    <tr><td class="paramname">model</td><td>Macierz modelu soczewki (dla przekształceń). </td></tr>
+    <tr><td class="paramname">t</td><td>Zmienna przechowująca parametr T trafienia. </td></tr>
+    <tr><td class="paramname">normal</td><td>Wektor normalny trafionej płaszczyzny soczewki. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true w przypadku pomyślnej detekcji kolizji. </dd></dl>
+
+</div>
+</div>
+<a id="ab9640d8d70b3f96add6ca2425b5ff6e1" name="ab9640d8d70b3f96add6ca2425b5ff6e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9640d8d70b3f96add6ca2425b5ff6e1">&#9670;&#160;</a></span>intersectMirror()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool intersectMirror </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;</td>          <td class="paramname"><span class="paramname"><em>mirrorM</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>normal</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza przecięcie promienia z płaskim lustrem. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>Punkt początkowy promienia. </td></tr>
+    <tr><td class="paramname">dir</td><td>Kierunek promienia. </td></tr>
+    <tr><td class="paramname">mirrorM</td><td>Macierz transformacji lustra w przestrzeni. </td></tr>
+    <tr><td class="paramname">t</td><td>Dystans promienia do płaszczyzny lustra. </td></tr>
+    <tr><td class="paramname">normal</td><td>Wektor normalny powierzchni lustra. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jeśli promień uderza w lustro. </dd></dl>
+
+</div>
+</div>
+<a id="a02320bac24a2f731506cef7f4af9f2a9" name="a02320bac24a2f731506cef7f4af9f2a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02320bac24a2f731506cef7f4af9f2a9">&#9670;&#160;</a></span>intersectPrism()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool intersectPrism </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>normal</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza przecięcie promienia z całym pryzmatem. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>Punkt początkowy promienia. </td></tr>
+    <tr><td class="paramname">dir</td><td>Kierunek promienia. </td></tr>
+    <tr><td class="paramname">t</td><td>Zmienna wyjściowa przechowująca dystans do najbliższego przecięcia. </td></tr>
+    <tr><td class="paramname">normal</td><td>Normalna trafionej ściany pryzmatu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jeśli promień trafia w pryzmat. </dd></dl>
+
+</div>
+</div>
+<a id="a01e6d150dbb3694709083f704679bcab" name="a01e6d150dbb3694709083f704679bcab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01e6d150dbb3694709083f704679bcab">&#9670;&#160;</a></span>intersectPrismFace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool intersectPrismFace </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>v0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>v1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>v2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>orientedNormal</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza przecięcie promienia z pojedynczą ścianą pryzmatu. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>Punkt początkowy promienia. </td></tr>
+    <tr><td class="paramname">dir</td><td>Kierunek promienia. </td></tr>
+    <tr><td class="paramname">v0</td><td>Wierzchołek ściany. </td></tr>
+    <tr><td class="paramname">v1</td><td>Wierzchołek ściany. </td></tr>
+    <tr><td class="paramname">v2</td><td>Wierzchołek ściany. </td></tr>
+    <tr><td class="paramname">t</td><td>Dystans do punktu trafienia. </td></tr>
+    <tr><td class="paramname">orientedNormal</td><td>Zorientowany wektor normalny ułatwiający odbicie lub załamanie. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jeśli nastąpiło przecięcie ze ścianą pryzmatu. </dd></dl>
+
+</div>
+</div>
+<a id="a81ee193120596c646dec64d7a7670cb0" name="a81ee193120596c646dec64d7a7670cb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ee193120596c646dec64d7a7670cb0">&#9670;&#160;</a></span>intersectRaySegment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float intersectRaySegment </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec3</td>          <td class="paramname"><span class="paramname"><em>ro</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3</td>          <td class="paramname"><span class="paramname"><em>rd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3</td>          <td class="paramname"><span class="paramname"><em>p0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3</td>          <td class="paramname"><span class="paramname"><em>p1</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Oblicza odległość między promieniem kamery a segmentem promienia światła. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ro</td><td>Punkt początkowy promienia patrzenia kamery. </td></tr>
+    <tr><td class="paramname">rd</td><td>Kierunek patrzenia kamery. </td></tr>
+    <tr><td class="paramname">p0</td><td>Pierwszy punkt segmentu światła. </td></tr>
+    <tr><td class="paramname">p1</td><td>Drugi punkt segmentu światła. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Najmniejsza odległość przestrzenna między prostopadłymi zrzutami obu promieni. </dd></dl>
+
+</div>
+</div>
+<a id="a65a56d5076ef9d4dfd76ec783cb34c41" name="a65a56d5076ef9d4dfd76ec783cb34c41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a56d5076ef9d4dfd76ec783cb34c41">&#9670;&#160;</a></span>intersectRoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool intersectRoom </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>normal</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza przecięcie promienia ze ścianami pokoju/sceny. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>Punkt startu. </td></tr>
+    <tr><td class="paramname">dir</td><td>Kierunek strzału. </td></tr>
+    <tr><td class="paramname">t</td><td>Dystans odcinek z origin do pokoju. </td></tr>
+    <tr><td class="paramname">normal</td><td>Wektor prostopadły do wyznaczonej ściany. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jeżeli promień przecina pokój. </dd></dl>
+
+</div>
+</div>
+<a id="a213bad50fa74a196fc8ef66a2ed8c8ee" name="a213bad50fa74a196fc8ef66a2ed8c8ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a213bad50fa74a196fc8ef66a2ed8c8ee">&#9670;&#160;</a></span>intersectSphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool intersectSphere </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>normal</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza przecięcie promienia ze sferą. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>Punkt początkowy promienia. </td></tr>
+    <tr><td class="paramname">dir</td><td>Kierunek promienia. </td></tr>
+    <tr><td class="paramname">t</td><td>Dystans do punktu trafienia. </td></tr>
+    <tr><td class="paramname">normal</td><td>Normalna powierzchni sfery w punkcie uderzenia. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jeśli promień przecina sferę. </dd></dl>
+
+</div>
+</div>
+<a id="a6991598d702efa8d568dd0e23d5b4044" name="a6991598d702efa8d568dd0e23d5b4044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6991598d702efa8d568dd0e23d5b4044">&#9670;&#160;</a></span>intersectTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool intersectTable </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>normal</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza przecięcie promienia ze stołem. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>Punkt początkowy promienia. </td></tr>
+    <tr><td class="paramname">dir</td><td>Kierunek promienia. </td></tr>
+    <tr><td class="paramname">t</td><td>Dystans do punktu trafienia. </td></tr>
+    <tr><td class="paramname">normal</td><td>Znormalizowany wektor normalny trafionej powierzchni stołu. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jeśli nastąpiło przecięcie ze stołem. </dd></dl>
+
+</div>
+</div>
+<a id="ae3cef983461dd6762b87af9be851593d" name="ae3cef983461dd6762b87af9be851593d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3cef983461dd6762b87af9be851593d">&#9670;&#160;</a></span>rayTriangleIntersect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rayTriangleIntersect </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>orig</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>v0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>v1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>v2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>faceNormal</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza przecięcie promienia z trójkątem w przestrzeni 3D. </p>
+<p>Używa algorytmu Möllera-Trumbore'a dla szybkiej weryfikacji punktu trafienia. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orig</td><td>Punkt początkowy promienia. </td></tr>
+    <tr><td class="paramname">dir</td><td>Znormalizowany wektor kierunku promienia. </td></tr>
+    <tr><td class="paramname">v0</td><td>Pierwszy wierzchołek trójkąta. </td></tr>
+    <tr><td class="paramname">v1</td><td>Drugi wierzchołek trójkąta. </td></tr>
+    <tr><td class="paramname">v2</td><td>Trzeci wierzchołek trójkąta. </td></tr>
+    <tr><td class="paramname">t</td><td>Referencja na zmienną przechowującą dystans do przecięcia. </td></tr>
+    <tr><td class="paramname">faceNormal</td><td>Referencja na wektor normalny powierzchni. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true jeśli promień uderzył w trójkąt. </dd></dl>
+
+</div>
+</div>
+<a id="a0d7e42c67683294bd637b4da0739a10c" name="a0d7e42c67683294bd637b4da0739a10c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d7e42c67683294bd637b4da0739a10c">&#9670;&#160;</a></span>refractiveIndexForWavelength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float refractiveIndexForWavelength </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>wavelength</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Oblicza wskaźnik załamania dla zadanej długości fali. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wavelength</td><td>Długość fali w mikrometrach. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Współczynnik załamania światła. </dd></dl>
+
+</div>
+</div>
+<a id="ab3f4a70535b9ea8fb946ca4b80cbe460" name="ab3f4a70535b9ea8fb946ca4b80cbe460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f4a70535b9ea8fb946ca4b80cbe460">&#9670;&#160;</a></span>simulateBurst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void simulateBurst </td>
+          <td>(</td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>direction</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Symuluje wybuch promieni świetlnych z rozdzieleniem na długości fali. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>Punkt startu wybuchu. </td></tr>
+    <tr><td class="paramname">direction</td><td>Kierunek wybuchu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3db67d9c21e5f7964a5e98e7c5dd920f" name="a3db67d9c21e5f7964a5e98e7c5dd920f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db67d9c21e5f7964a5e98e7c5dd920f">&#9670;&#160;</a></span>traceBeam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void traceBeam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_beam_ray.html">BeamRay</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>inside</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>depth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>currentIOR</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>wavelength</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Śledzi przebieg promienia przez scenę z odbiciami i załamaniami. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray</td><td>Promień do narysowania. </td></tr>
+    <tr><td class="paramname">origin</td><td>Punkt początkowy promienia. </td></tr>
+    <tr><td class="paramname">dir</td><td>Kierunek promienia. </td></tr>
+    <tr><td class="paramname">inside</td><td>Czy promień znajduje się wewnątrz materiału. </td></tr>
+    <tr><td class="paramname">depth</td><td>Głębokość rekurencji śledzonego promienia. </td></tr>
+    <tr><td class="paramname">currentIOR</td><td>Bieżący współczynnik załamania. </td></tr>
+    <tr><td class="paramname">wavelength</td><td>Długość fali promienia. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32421fffdaf5fa31a4bd0db1d28d117e" name="a32421fffdaf5fa31a4bd0db1d28d117e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32421fffdaf5fa31a4bd0db1d28d117e">&#9670;&#160;</a></span>wavelengthToColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec4 wavelengthToColor </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>wavelength</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konwertuje długość fali na kolor RGBA. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wavelength</td><td>Długość fali świata w mikrometrach (0.38 - 0.70). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Wektor koloru RGBA. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="rays_8cpp.html">rays.cpp</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
